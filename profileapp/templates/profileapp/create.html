@@ -14,7 +14,7 @@
     </div>
 
     <div style="max-width: 900px; margin: auto">
-        <form action="{% url 'profileapp:create' %}" method="post">
+        <form action="{% url 'profileapp:create' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {% bootstrap_form form %}
             <button class="btn btn-warning rounded-pill px-4"
