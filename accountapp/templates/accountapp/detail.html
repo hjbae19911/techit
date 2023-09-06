@@ -9,7 +9,8 @@
 
     <div class="my-5">
         <div>
-            <img src="{{ target_user.profile.image.url }}" alt="">
+            <img src="{{ target_user.profile.image.url }}" alt=""
+             style="height: 15rem; width: 15rem; border-radius: 100rem;">
         </div>
         <h1>
             {{ target_user.profile.nickname }}
@@ -17,7 +18,7 @@
     </div>
 
     <div style="max-width: 900px; margin: auto">
-        {{ target_user.date_joined }}
+        {{ target_user.profile.message }}
 
         {% if user == target_user %}
         <div>
