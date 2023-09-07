@@ -23,12 +23,12 @@ class ProfileCreateView(CreateView):
         return reverse('accountapp:detail',
                        kwargs={'pk': self.request.user.pk})
 
-    class ProfileUpdateView(UpdateView):
-        model = Profile
-        form_class = ProfileForm
-        context_object_name = 'target_profile'
-        template_name = 'profileapp/update.html'
+class ProfileUpdateView(UpdateView):
+    model = Profile
+    form_class = ProfileForm
+    context_object_name = 'target_profile'
+    template_name = 'profileapp/update.html'
 
-        def get_success_url(self):
-            return reverse('accountapp:detail',
-                           kwargs={'pk': self.request.user.pk})
+    def get_success_url(self):
+        return reverse('accountapp:detail',
+                       kwargs={'pk': self.request.user.pk})
